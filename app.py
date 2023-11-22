@@ -13,7 +13,7 @@ def load_data():
 # Function to load the trained model
 @st.cache_resource
 def load_model():
-    model = joblib.load('random_forest_diabetes_model.joblib')
+    model = joblib.load('diabetes_rf_model.joblib')
     return model
 
 # Function to get user input
