@@ -110,3 +110,15 @@ def main():
 # Run the app
 if __name__ == '__main__':
     main()
+
+
+# Function to predict and display results
+def predict_and_display(model, input_features):
+    prediction = model.predict(input_features)[0]
+    
+    if prediction == 0:
+        st.success("The prediction is: Non-diabetic")
+    elif prediction == 1:
+        st.warning("The prediction is: Pre-diabetic. Consider consulting a healthcare professional for advice.")
+    else:
+        st.error("The prediction is: Diabetic. Please consult a healthcare professional.")
